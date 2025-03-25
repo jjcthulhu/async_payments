@@ -1,11 +1,11 @@
-com/asyncpayments/strategy/StripePayment.class
 com/asyncpayments/strategy/InternetConnection.class
 com/asyncpayments/controller/PagadorController.class
 com/asyncpayments/AsyncPaymentsApplication.class
 com/asyncpayments/strategy/PaymentStrategy.class
-com/asyncpayments/service/TransactionService.class
 com/asyncpayments/controller/IntermediarioController.class
+com/asyncpayments/model/Transaction.class
+com/asyncpayments/strategy/StripePayment.class
+com/asyncpayments/service/TransactionService.class
 com/asyncpayments/strategy/ConnectionStrategy.class
 com/asyncpayments/controller/RecebedorController.class
-com/asyncpayments/model/Transaction.class
 com/asyncpayments/repository/TransactionRepository.class

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TransactionService {
@@ -28,7 +29,7 @@ public class TransactionService {
     }
 
     public List<Transaction> getAllTransactions() {
-	return transactionRepository.findAll();
+        return transactionRepository.findAll();
     }
 
     public void processTransaction(Long id, String status) {
@@ -36,5 +37,9 @@ public class TransactionService {
         transaction.setStatus(status);
         transaction.setProcessedAt(LocalDateTime.now());
         transactionRepository.save(transaction);
+    }
+
+    public Transaction getTransactionById(Long id) {
+        return transactionRepository.findById(id).orElseThrow();
     }
 }

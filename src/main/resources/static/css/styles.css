@@ -1,0 +1,17 @@
+body {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.card {
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}

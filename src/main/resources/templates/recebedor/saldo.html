@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
+    <title>Consultar Saldo</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Saldo Disponível</h2>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h3 th:text="'R$ ' + ${saldo}"></h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>
