@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
+    <title>Logs de Transações</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Histórico de Transações</h2>
+    
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Valor</th>
+                <th>Status</th>
+                <th>Método</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="tx : ${transacoes}">
+                <td th:text="${tx.id}"></td>
+                <td th:text="'R$ ' + ${tx.amount}"></td>
+                <td th:text="${tx.status}"></td>
+                <td th:text="${tx.paymentMethod}"></td>
+                <td th:text="${tx.createdAt}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

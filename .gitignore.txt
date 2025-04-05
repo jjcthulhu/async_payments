@@ -1,0 +1,67 @@
+### Diretórios ###
+/target/
+/bin/
+/data/
+/generated-sources/
+/maven-status/
+
+### Arquivos de Build ###
+*.class
+*.jar
+*.war
+*.ear
+*.original
+
+### Arquivos de Configuração Local ###
+*.yaml
+*.properties
+*.sql
+
+### Arquivos do Sistema ###
+*.DS_Store
+*.Zone.Identifier
+Thumbs.db
+
+### Arquivos de IDE ###
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+### Arquivos Temporários ###
+*.tmp
+*.bak
+*.swp
+*~
+
+### Arquivos de Log ###
+*.log
+logs/
+
+### Maven ###
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+### Python ###
+__pycache__/
+*.py[cod]
+
+### Exceções (mantém esses arquivos na raiz) ###
+!pom.xml
+!README.md
+!requirements.txt
+!Dockerfile
+!docker-compose.yml
+
+### Exceções (mantém arquivos essenciais em src) ###
+!src/main/resources/application.properties
+!src/main/resources/data.sql
+!src/main/resources/static/css/styles.css
+!src/main/resources/templates/**/*.html

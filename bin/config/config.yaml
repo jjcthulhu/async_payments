@@ -1,0 +1,7 @@
+database:
+  path: /home/debian/async_payments/db/payment_system.db
+
+oauth2:
+  client_id: "your_client_id"
+  client_secret: "your_client_secret"
+  token_url: "https://oauth2.example.com/token"

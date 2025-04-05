@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
+    <title>Transações Pendentes</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Transações Pendentes</h2>
+    
+    <div th:if="${message}" class="alert alert-info" th:text="${message}"></div>
+    
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Valor</th>
+                <th>Método</th>
+                <th>Conexão</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="tx : ${transacoes}">
+                <td th:text="${tx.id}"></td>
+                <td th:text="'R$ ' + ${tx.amount}"></td>
+                <td th:text="${tx.paymentMethod}"></td>
+                <td th:text="${tx.connectionType}"></td>
+                <td>
+                    <a th:href="@{/intermediario/transacoes/processar/{id}(id=${tx.id})}" 
+                       class="btn btn-primary btn-sm">Processar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
