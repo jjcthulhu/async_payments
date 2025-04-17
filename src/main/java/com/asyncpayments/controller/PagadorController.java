@@ -1,9 +1,7 @@
 package com.asyncpayments.controller;
 
 import com.asyncpayments.dto.TransactionForm;
-import com.asyncpayments.model.Saldos;
 import com.asyncpayments.model.Transaction;
-import com.asyncpayments.repository.SaldosRepository;
 import com.asyncpayments.service.TransactionService;
 
 import jakarta.validation.Valid;
@@ -22,9 +20,6 @@ public class PagadorController {
     @Autowired
     private TransactionService transactionService;
     
-    @Autowired
-    private SaldosRepository saldosRepository;
-
     private String getUsuarioLogado() {
         // Implementação temporária - retorne um ID fixo para testes
         return "pagador_123";
